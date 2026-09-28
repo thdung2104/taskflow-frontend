@@ -1,0 +1,5 @@
+// ↔ backend routes/notificationRoutes.js (/api/notifications)
+import api from './api';
+export const getNotifications = () => api.get('/notifications');
+export const markAsRead = (id) => api.patch(`/notifications/${id}/read`);
+export const markAllAsRead = () => api.patch('/notifications/read-all');
